@@ -1,0 +1,89 @@
+// this one just agregates all the libs
+@import "compass/css3"
+//variables
+$blue: blue
+// global sprites with padding
+$icons: sprite-map("icons/*.png", $spacing: 10px)
+// sized sprites
+@mixin image-size($path)
+	width: image-width($path)
+	height: image-height($path)
+@mixin sized-sprite($map, $sprite)
+	background: sprite($map, $sprite) no-repeat
+	@include image-size(sprite-file($map, $sprite))
+//shortcut
+@mixin s($sprite, $map: $icons)
+	background: sprite($map, $sprite) no-repeat
+	@include image-size(sprite-file($map, $sprite))
+//only image, when dimensions are useless
+@mixin si($map, $sprite)
+	background: sprite($map, $sprite) no-repeat
+//mixin
+@mixin ht
+	font: 0/0 a
+	text-shadow: none
+	color: transparent
+@mixin clr
+	&:before, &:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+//transition
+@mixin trans($what)
+	-moz-transition: $what
+	-o-transition: $what
+	-webkit-transition: $what
+	-ms-transition: $what
+	transition: $what
+// placeholder color
+@mixin placeholder($color)
+	&.placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&::-webkit-input-placeholder
+		color: $color
+//no-select
+@mixin no-sel
+	-moz-user-select: none
+	-webkit-user-select: none
+	user-select: none
+//fonts
+@font-face
+	font-family: "HelveticaNeueCyr-Light"
+	src: url("../fonts/HelveticaNeueCyr-Light.eot")
+	src: url("../fonts/HelveticaNeueCyr-Light.eot") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Light.woff") format("woff")
+@mixin fl
+	font-family: "HelveticaNeueCyr-Light", "Helvetica Light", Helvetica, Arial, sans-serif
+@font-face
+	font-family: "HelveticaNeueCyr-Medium"
+	src: url("../fonts/HelveticaNeueCyr-Medium.eot")
+	src: url("../fonts/HelveticaNeueCyr-Medium.eot") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff")
+@mixin fm
+	font-family: "HelveticaNeueCyr-Medium", "Helvetica Medium", Helvetica, Arial, sans-serif
+@font-face
+	font-family: "HelveticaNeueCyr-Roman"
+	src: url("../fonts/HelveticaNeueCyr-Roman.eot")
+	src: url("../fonts/HelveticaNeueCyr-Roman.eot") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff")
+@mixin fr
+	font-family: "HelveticaNeueCyr-Roman", "Helvetica Roman", Helvetica, Arial, sans-serif
+@font-face
+	font-family: "HelveticaNeueCyr-UltraLight"
+	src: url("../fonts/HelveticaNeueCyr-UltraLight.eot")
+	src: url("../fonts/HelveticaNeueCyr-UltraLight.eot") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-UltraLight.woff") format("woff")
+@mixin flu
+	font-family: "HelveticaNeueCyr-UltraLight", "Helvetica Ultra Light", Helvetica, Arial, sans-serif
+//media query
+@mixin rt($media)
+	@if $media == 1920
+		@media only screen and (max-width: 1920px)
+			@content
+	@else if $media == 1600
+		@media only screen and (max-width: 1600px)
+			@content
+	@else if $media == 1380
+		@media only screen and (max-width: 1380px)
+			@content
+	@else if $media == 1120
+		@media only screen and (max-width: 1120px)
