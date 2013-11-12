@@ -111,7 +111,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .slider__notebook img { position: absolute; top: 27px; left: 76px; z-index: 2; }
 .slider__notebook:before { content: ""; position: absolute; top: 14px; left: 71px; background: url('../img/icons-sd0e56a3bc8.png') 0 -2858px no-repeat; width: 132px; height: 179px; z-index: 4; }
 
-.slider__title { top: -100px; left: 640px; width: 320px; font-family: "HelveticaNeueCyr-Light", "Helvetica Light", Helvetica, Arial, sans-serif; font-size: 40px; color: #2c6c2c; text-transform: uppercase; }
+.slider__title { top: -100px; left: 640px; width: 350px; font-family: "HelveticaNeueCyr-Light", "Helvetica Light", Helvetica, Arial, sans-serif; font-size: 40px; color: #2c6c2c; text-transform: uppercase; }
 
 .slider__list { left: 1140px; top: 185px; width: 320px; font-family: "HelveticaNeueCyr-Medium", "Helvetica Medium", Helvetica, Arial, sans-serif; font-size: 19px; color: #2c6c2c; }
 .slider__list li { margin-bottom: 20px; }
