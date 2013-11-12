@@ -76,7 +76,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .slider__el-5 .slider__title { width: 350px; }
 
-.slider__el { z-index: 10; }
+.slider__el.is-active { z-index: 10; }
 .slider__el.is-active .slider__block { opacity: 1; }
 .slider__el.is-active .slider__iphone { left: 310px; }
 .slider__el.is-active .slider__blackberry { left: 190px; }

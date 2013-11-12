@@ -45,6 +45,17 @@ function slider() {
 			current.parent().prev().find('a').trigger('click');
 		};
 	});
+
+	$(document).keydown(function(e) {
+	  if(e.keyCode == 37) { // left
+	  	var current = nav.find('a.is-active');
+	  	current.parent().prev().find('a').trigger('click');
+	  }
+	  else if(e.keyCode == 39) { // right
+	    var current = nav.find('a.is-active');
+	    current.parent().next().find('a').trigger('click');
+	  }
+	});
 }
 slider();
 
