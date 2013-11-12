@@ -27,7 +27,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .wrap { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(25%, #f3f7ce), color-stop(50%, #daea89), color-stop(75%, #b6d765), color-stop(100%, #d3e782)); background-image: -webkit-linear-gradient(#ffffff, #f3f7ce, #daea89, #b6d765, #d3e782); background-image: -moz-linear-gradient(#ffffff, #f3f7ce, #daea89, #b6d765, #d3e782); background-image: -o-linear-gradient(#ffffff, #f3f7ce, #daea89, #b6d765, #d3e782); background-image: linear-gradient(#ffffff, #f3f7ce, #daea89, #b6d765, #d3e782); overflow: hidden; }
 
-.header { position: absolute; top: 60px; left: 50%; width: 1020px; margin-left: -510px; z-index: 100; }
+.header { position: absolute; top: 40px; left: 50%; width: 1020px; margin-left: -510px; z-index: 100; }
 
 .logo { float: left; margin: 18px 14px 0 0; background: url('../img/icons-s7423fa7565.png') 0 -2800px no-repeat; width: 222px; height: 48px; }
 
@@ -46,7 +46,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .nav__list a { position: relative; display: block; min-height: 60px; padding: 15px; font-family: "HelveticaNeueCyr-Roman", "Helvetica Roman", Helvetica, Arial, sans-serif; font-size: 17px; color: #78ac4e; -moz-transition: color 0.4s linear; -o-transition: color 0.4s linear; -webkit-transition: color 0.4s linear; -ms-transition: color 0.4s linear; transition: color 0.4s linear; }
 .nav__list a.is-active { color: white; }
 
-.slider { position: absolute; top: 230px; left: 0; right: 0; height: 500px; }
+.slider { position: absolute; top: 50%; left: 0; right: 0; margin-top: -230px; height: 500px; }
 
 .slider__btn-prev, .slider__btn-next { position: absolute; top: 50%; width: 60px; height: 120px; margin-top: -60px; -moz-transition: opacity 0.2s linear; -o-transition: opacity 0.2s linear; -webkit-transition: opacity 0.2s linear; -ms-transition: opacity 0.2s linear; transition: opacity 0.2s linear; opacity: 1; z-index: 200; }
 .slider__btn-prev:before, .slider__btn-prev:after, .slider__btn-next:before, .slider__btn-next:after { content: ""; position: absolute; top: 60px; left: 0; width: 85px; height: 2px; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; -webkit-transition: background 0.2s linear; -ms-transition: background 0.2s linear; transition: background 0.2s linear; background: #ba3d78; }
