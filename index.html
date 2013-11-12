@@ -16,19 +16,85 @@
 	<header class="header">
 		<div class="logo"></div>
 		<nav class="nav">
-			<ul>
-				<li><a class="is-active" href="#">Персональный банкомат в кармане<i></i></a></li>
-				<li><a href="#">Доступно для всех смартфонов и телефонов<i></i></a></li>
-				<li><a href="#">Подключение банковских счетов к телефону<i></i></a></li>
-				<li><a href="#">Регулярные платежи<i></i></a></li>
-				<li><a href="#">Безопасная оплата покупок в один клик<i></i></a></li>
+			<div class="nav__bg"><i></i></div>
+			<ul class="nav__list">
+				<li><a class="is-active" href="slider__el-1">Персональный банкомат в кармане<i></i></a></li>
+				<li><a href="slider__el-2">Доступно для всех смартфонов и телефонов<i></i></a></li>
+				<li><a href="slider__el-3">Подключение банковских счетов к телефону<i></i></a></li>
+				<li><a href="slider__el-4">Регулярные платежи<i></i></a></li>
+				<li><a href="slider__el-5">Безопасная оплата покупок в один клик<i></i></a></li>
 			</ul>
 		</nav>
 	</header>
 	<section class="slider">
-		<button class="slider__btn-prev"></button>
-		<button class="slider__btn-next is-active"></button>
+		<button class="slider__btn-prev is-disabled"></button>
+		<button class="slider__btn-next"></button>
+		<div class="slider__items">
+			<div class="slider__el slider__el-1 is-active">
+				<div class="slider__iphone slider__block"><img src="img/iphone.jpg"></div>
+				<div class="slider__blackberry slider__block"><img src="img/blackberry.jpg"></div>
+				<div class="slider__coffee slider__block"></div>
+				<div class="slider__title slider__block">ПЕРСОНАЛЬНЫЙ БАНКОМАТ В КАРМАНЕ</div>
+				<ul class="slider__list slider__block">
+					<li>Доступно для всех смартфонов и телефонов </li> 
+					<li>Подключение любых банковских счетов к телефону </li> 
+					<li>Регулярные платежи </li> 
+					<li>Безопасная оплата покупок в один клик </li>
+				</ul>
+			</div>
+			<div class="slider__el slider__el-2">
+				<div class="slider__iphone slider__block"><img src="img/iphone.jpg"></div>
+				<div class="slider__blackberry slider__block"><img src="img/blackberry.jpg"></div>
+				<div class="slider__taxi slider__block"></div>
+				<div class="slider__title slider__block">ДОСТУПНО ДЛЯ ВСЕХ СМАРТФОНОВ И ТЕЛЕФОНОВ</div>
+				<ul class="slider__list slider__block">
+					<li>Просто и удобно</li>
+					<li><strong>для телефонов</strong>USSD-интерфейс без доступа к интернету</li>
+					<li><strong>для телефонов</strong>с доступом в интернет в виде приложения</li>
+				</ul>
+			</div>
+			<div class="slider__el slider__el-3">
+				<div class="slider__iphone slider__block"><img src="img/iphone.jpg"></div>
+				<div class="slider__blackberry slider__block"><img src="img/blackberry.jpg"></div>
+				<div class="slider__cards slider__block"></div>
+				<div class="slider__title slider__block">ПОДКЛЮЧЕНИЕ БАНКОВСКИХ СЧЕТОВ К СМАРТФОНУ ИЛИ ТЕЛЕФОНОВ</div>
+				<ul class="slider__list slider__block">
+					<li>Просто и удобно</li>
+					<li><strong>для телефонов</strong>USSD-интерфейс без доступа к интернету</li>
+					<li><strong>для телефонов</strong>с доступом в интернет в виде приложения</li>
+				</ul>
+			</div>
+			<div class="slider__el slider__el-4">
+				<div class="slider__iphone slider__block"><img src="img/iphone.jpg"></div>
+				<div class="slider__blackberry slider__block"><img src="img/blackberry.jpg"></div>
+				<div class="slider__calendar slider__block"></div>
+				<div class="slider__title slider__block">РЕГУЛЯРНЫЕ ПЛАТЕЖИ</div>
+				<ul class="slider__list slider__block">
+					<li>Совершайте регулярные платежи удобно, быстро и без комиссий</li>
+					<li>не нужно никуда ходить</li>
+					<li>терминал по приему платежей у вас в кармане</li>
+					<li>без дополнительных комиссий</li>
+				</ul>
+			</div>
+			<div class="slider__el slider__el-5">
+				<div class="slider__iphone slider__block"><img src="img/iphone.jpg"></div>
+				<div class="slider__notebook slider__block"><img src="img/notebook.jpg" alt=""></div>
+				<div class="slider__title slider__block">БЕЗОПАСНАЯ ОПЛАТА ПОКУПОК В ОДИН КЛИК</div>
+				<ul class="slider__content slider__block">
+					<p>Забудьте про ввод номеров банк. карт и кражу данных.</p>
+				</ul>
+				<button class="slider__btn slider__block">Заявка на подключение<i></i></button>
+			</div>
+		</div>
 	</section>
+	<footer class="footer">
+		<ul class="logos">
+			<li class="logos__item-1"></li>
+			<li class="logos__item-2"></li>
+			<li class="logos__item-3"></li>
+			<li class="logos__item-4"></li>
+		</ul>
+	</footer>
 </section>
 <!-- END .wrap -->
 </body>

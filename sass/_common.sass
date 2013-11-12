@@ -2,7 +2,7 @@
 * 
 	margin: 0
 	padding: 0 
-	//-webkit-text-size-adjust: none
+	//+transform(translate3D(0,0,0))
 html, body 
 	height: 100%
 body
@@ -10,18 +10,10 @@ body
 	font-weight: normal 
 	font-size: 14px
 	line-height: 1.2
-	//-webkit-transform: translate3d(0,0,0);
-	//-weblit-backface-visibility: hidden;
-// resets
 a img, fieldset 
 	border: none
 a
-	color: #2c2c2c 
 	text-decoration: none
-	&:hover
-
-p
-	line-height: 1.2
 li 
 	list-style: none
 textarea, button, select, input
@@ -46,20 +38,52 @@ table
 	right: 0
 	bottom: 0
 	+background-image(linear-gradient(#fff, #f3f7ce, #daea89, #b6d765, #d3e782))
+	overflow: hidden
 .header
 	position: absolute 
 	top: 60px
 	left: 50%
 	width: 1020px
 	margin-left: -510px
+	z-index: 100 
 .logo
 	float: left
 	margin: 18px 14px 0 0
 	+s(logo)
 .nav
+	position: relative
 	float: left
-	ul
-		float: left
+	+transform(translate3D(0,0,0))
+.nav__bg
+	position: absolute
+	top: 0
+	left: 0
+	width: 150px
+	height: 90px
+	background: #ce6392
+	+background-image(linear-gradient(45deg, #ce6392, #b63472))
+	border-radius: 25px 0 
+	color: #fff
+	+trans(all .4s linear)
+	-webkit-font-smoothing: none
+	i
+		position: absolute
+		bottom: -14px
+		left: 0
+		width: 20px
+		height: 14px
+		overflow: hidden
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 40px
+			height: 28px
+			border-radius: 50%
+			box-shadow: 0 0 0 10px #ce6392 
+.nav__list
+	float: left
 	li
 		float: left
 		width: 150px 
@@ -74,34 +98,14 @@ table
 	a
 		position: relative
 		display: block
+		min-height: 60px
 		padding: 15px
 		+fr
 		font-size: 17px
 		color: #78AC4E 
+		+trans(color .4s linear)
 		&.is-active
-			background: #ce6392
-			+background-image(linear-gradient(45deg, #ce6392, #b63472))
-			border-radius: 25px 0 
 			color: #fff 
-			i
-				display: block
-		i
-			display: none
-			position: absolute
-			bottom: -14px
-			left: 0
-			width: 20px
-			height: 14px
-			overflow: hidden
-			&:after
-				content: ""
-				position: absolute
-				top: 0
-				left: 0
-				width: 40px
-				height: 28px
-				border-radius: 50%
-				box-shadow: 0 0 0 10px #ce6392
 				
 .slider
 	position: absolute
@@ -115,14 +119,18 @@ table
 	width: 60px 
 	height: 120px
 	margin-top: -60px
+	+trans(opacity .2s linear)
+	opacity: 1 
+	z-index: 200 
 	&:before, &:after
 		content: ""
 		position: absolute
 		top: 60px
 		left: 0
 		width: 85px
-		height: 2px
-		background: #58ab47 
+		height: 2px		
+		+trans(background .2s linear)
+		background: #ba3d78  
 .slider__btn-prev, .slider__btn-next
 	&:before
 		transform: rotate(45deg)
@@ -138,9 +146,11 @@ table
 		-ms-transform-origin: 0 0
 		-webkit-transform: rotate(-45deg)
 		-webkit-transform-origin: 0 0
-	&.is-active
-		&:after, &:before
-			background: #ba3d78 
+	&:hover
+		&:before, &:after
+			background: #58ab47
+	&.is-disabled
+		opacity: 0 			
 .slider__btn-next
 	&:before
 		top: 0
@@ -162,5 +172,235 @@ table
 	left: 50px
 .slider__btn-next
 	right: 50px
-	
-
+.slider__items, .slider__el
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 50%
+	width: 1020px
+	margin-left: -510px
+.slider__el-2, .slider__el-3
+	.slider__list
+		top: 215px
+		li
+			&:first-child
+				margin-bottom: 10px
+				padding: 0
+				&:before
+					display: none
+		strong
+			display: block
+			+fm
+			font-weight: normal 
+.slider__el-3
+	.slider__list
+		top: 260px 
+.slider__el-4
+	.slider__list
+		top: 115px
+		li
+			&:first-child
+				margin-bottom: 10px
+				padding: 0
+				&:before
+					display: none
+.slider__el-5
+	.slider__title
+		width: 350px
+.slider__items
+	//background: red 
+.slider__el
+	z-index: 10 
+	&.is-active
+		.slider__block
+			opacity: 1 
+		.slider__iphone
+			left: 310px
+		.slider__blackberry
+			left: 190px
+		.slider__coffee
+			left: 40px
+		.slider__title	
+			top: 10px
+		.slider__list
+			left: 640px
+		.slider__taxi
+			left: 0
+		.slider__cards
+			left: 0
+		.slider__calendar
+			left: 15px
+		.slider__notebook
+			left: -60px
+		.slider__content
+			left: 640px
+		.slider__btn
+			left: 640px
+.slider__block
+	position: absolute
+	+trans(all .5s linear)	
+	opacity: 0
+.slider__iphone
+	top: 15px
+	left: -810px
+	+s(iphone)
+	z-index: 10 
+	img
+		position: absolute
+		top: 82px
+		left: 81px
+		z-index: 2 
+	&:before
+		content: ""
+		position: absolute
+		top: 2px
+		left: 67px
+		+s(iphone-shine)
+		z-index: 4 
+.slider__blackberry
+	top: 40px
+	left: -690px
+	+s(blackberry)
+	+trans(all .6s linear)
+	z-index: 8
+	img
+		position: absolute
+		top: 68px
+		left: 39px
+		z-index: 2 
+	&:before
+		content: ""
+		position: absolute
+		top: 2px
+		left: 26x
+		+s(blackberry-shine)
+		z-index: 4 
+.slider__coffee
+	top: -45px
+	left: -540px
+	+s(coffee)
+	+trans(all .7s linear)
+	z-index: 6
+.slider__taxi
+	top: 265px
+	left: -500px
+	+s(taxi)
+	+trans(all .7s linear)
+	z-index: 6
+.slider__cards
+	top: 265px
+	left: -500px
+	+s(cards)
+	+trans(all .7s linear)
+	z-index: 6
+.slider__calendar
+	top: 80px
+	left: -515px
+	+s(calendar)
+	+trans(all .7s linear)
+	z-index: 6
+.slider__notebook
+	top: 10px
+	left: -560px
+	+s(notebook)
+	+trans(all .6s linear)
+	z-index: 6
+	img
+		position: absolute
+		top: 27px
+		left: 76px
+		z-index: 2 
+	&:before
+		content: ""
+		position: absolute
+		top: 14px
+		left: 71px
+		+s(notebook-shine)
+		z-index: 4 
+.slider__title
+	top: -100px
+	left: 640px 
+	width: 320px
+	+flu
+	font-size: 40px
+	color: $green 
+	text-transform: uppercase
+.slider__list
+	left: 1140px
+	top: 185px
+	width: 320px
+	+fl
+	font-size: 19px
+	color: $green 
+	li
+		position: relative
+		margin-bottom: 20px
+		padding-left: 20px
+		&:before
+			content: ""
+			position: absolute
+			top: 5px
+			left: 0
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			border: 1px solid $green
+.slider__content
+	top: 180px
+	left: 1440px
+	width: 320px
+	+fl
+	font-size: 19px
+	color: $green 
+.slider__btn
+	top: 260px
+	left: 2640px
+	width: 320px
+	height: 66px  
+	background: #cf6593
+	border-radius: 25px 0
+	+background-image(linear-gradient(#cf6593, #b63572))
+	+fl
+	font-size: 19px
+	color: #FFF 	
+	+trans(all .4s linear)
+	i
+		position: absolute
+		bottom: -14px
+		left: 0
+		width: 20px
+		height: 14px
+		overflow: hidden
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 40px
+			height: 28px
+			border-radius: 50%
+			box-shadow: 0 0 0 10px #b63572
+			
+//footer
+.footer
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 1020px
+	left: 50%
+	padding-bottom: 25px
+	margin-left: -510px
+.logos	
+	font-size: 0
+	li
+		display: inline-block
+		margin-right: 115px
+		vertical-align: middle
+.logos__item-1
+	+s(f-logo1)
+.logos__item-2
+	+s(f-logo2)
+.logos__item-3
+	+s(f-logo3)
+.logos__item-4
+	+s(f-logo4)
