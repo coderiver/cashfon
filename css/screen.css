@@ -73,8 +73,6 @@ table { border-spacing: 0; border-collapse: collapse; }
 .slider__el-4 .slider__list { top: 115px; }
 .slider__el-4 .slider__list li:first-child { margin-bottom: 10px; padding: 0; }
 
-.slider__el-5 .slider__title { width: 350px; }
-
 .slider__el.is-active { z-index: 10; }
 .slider__el.is-active .slider__block { opacity: 1; }
 .slider__el.is-active .slider__iphone { left: 310px; }
