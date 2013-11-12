@@ -48,4 +48,17 @@ function slider() {
 }
 slider();
 
+//popup
+function popup() {
+	var btn_open = $('.js-popup');
+	var btn_close = $('.popup__btn-close');
+	btn_open.click(function(){
+		$('.popup-wrap').fadeIn();
+	});
+	btn_close.click(function(){
+		$('.popup-wrap').fadeOut();
+	});
+}
+popup();
+
 });

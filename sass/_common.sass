@@ -187,8 +187,6 @@ table
 			&:first-child
 				margin-bottom: 10px
 				padding: 0
-				&:before
-					display: none
 		strong
 			display: block
 			+fm
@@ -203,8 +201,6 @@ table
 			&:first-child
 				margin-bottom: 10px
 				padding: 0
-				&:before
-					display: none
 .slider__el-5
 	.slider__title
 		width: 350px
@@ -330,27 +326,16 @@ table
 	left: 1140px
 	top: 185px
 	width: 320px
-	+fl
+	+fm
 	font-size: 19px
 	color: $green 
 	li
-		position: relative
 		margin-bottom: 20px
-		padding-left: 20px
-		&:before
-			content: ""
-			position: absolute
-			top: 5px
-			left: 0
-			width: 8px
-			height: 8px
-			border-radius: 50%
-			border: 1px solid $green
 .slider__content
 	top: 180px
 	left: 1440px
 	width: 320px
-	+fl
+	+fm
 	font-size: 19px
 	color: $green 
 .slider__btn
@@ -358,12 +343,14 @@ table
 	left: 2640px
 	width: 320px
 	height: 66px  
+	padding: 0 0 0 17px
 	background: #cf6593
 	border-radius: 25px 0
 	+background-image(linear-gradient(#cf6593, #b63572))
 	+fl
 	font-size: 19px
 	color: #FFF 	
+	text-align: left
 	+trans(all .4s linear)
 	i
 		position: absolute
@@ -381,6 +368,21 @@ table
 			height: 28px
 			border-radius: 50%
 			box-shadow: 0 0 0 10px #b63572
+	em
+		position: relative
+		display: inline-block
+		width: 36px
+		height: 36px
+		margin-right: 17px 
+		border-radius: 50%
+		+background-image(linear-gradient(#b63572, #cf6593))
+		vertical-align: middle
+		&:after
+			content: ""
+			position: absolute
+			top: 9px
+			left: 14px
+			+s(btn-arr)
 			
 //footer
 .footer
@@ -405,3 +407,97 @@ table
 	+s(f-logo3)
 .logos__item-4
 	+s(f-logo4)
+
+
+//popup
+.popup-wrap
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(145,192,88,.4)  
+	z-index: 1000 
+.popup
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 710px - 80px 
+	margin: -255px 0 0 -355px
+	padding: 30px 40px 40px
+	background: #FFF 
+	border-radius: 10px
+.popup__btn-close
+	position: absolute
+	top: 25px
+	right: 25px
+	+s(popup-close)
+.popup__title
+	margin-bottom: 30px
+	+fl
+	font-size: 35px
+	color: $green 
+
+//form
+.form__field
+	display: block
+	margin-bottom: 12px
+	+clr
+.form__label
+	float: left
+	width: 165px
+	height: 32px
+	padding-right: 15px
+	text-align: right
+	+fl
+	font-size: 21px
+	color: #85AE35  
+	line-height: 32px
+.form__input, .form__fieldset
+	float: left
+	width: 450px
+.form__input
+	input
+		width: 100%
+		height: 30px
+		padding: 0 5px	
+		border: 1px solid #d3e6bc	
+		+box-sizing(border-box)
+		+fl
+		font-size: 21px
+.form__fieldset
+	.form__input
+		float: left
+		margin-right: 10px 
+.form__input_day
+	width: 48px
+.form__input_month
+	width: 120px
+.form__input_year
+	width: 80px
+.form__btn
+	margin-top: 20px
+	padding-left: 180px 
+.btn
+	height: 56px
+	padding: 0 26px
+	+background-image(linear-gradient(#cf6593, #b63572))
+	+fl
+	font-size: 19px
+	color: #fff 
+	i
+		position: relative
+		display: inline-block
+		width: 36px
+		height: 36px
+		margin: 0 14px 0 -14px 
+		border-radius: 50%
+		+background-image(linear-gradient(#b63572, #cf6593))
+		vertical-align: middle
+		&:after
+			content: ""
+			position: absolute
+			top: 9px
+			left: 14px
+			+s(btn-arr)
