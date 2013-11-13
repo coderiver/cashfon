@@ -68,13 +68,15 @@ table
 	-webkit-font-smoothing: none
 	i
 		position: absolute
-		bottom: -28px
+		bottom: -13px
 		left: 0
-		width: 40px
-		height: 28px
-		border-radius: 50%
-		box-shadow: 0 0 0 10px #CE6392 
-		clip: rect(0, 20px, 14px, 0)
+		//width: 20px
+		// height: 14px
+		//background: #CE6392 
+		+s(corner)
+		// border-radius: 50%
+		// box-shadow: 0 0 0 10px #CE6392 
+		// clip: rect(0, 20px, 14px, 0)
 .nav__list
 	float: left
 	li
@@ -230,7 +232,7 @@ table
 .slider__iphone
 	top: 15px
 	left: -810px
-	+s(iphone)
+	+st(iphone)
 	z-index: 10 
 	img
 		position: absolute
@@ -247,7 +249,7 @@ table
 .slider__blackberry
 	top: 40px
 	left: -690px
-	+s(blackberry)
+	+st(blackberry)
 	+trans(all .6s linear)
 	z-index: 8
 	img
@@ -265,31 +267,31 @@ table
 .slider__coffee
 	top: -45px
 	left: -540px
-	+s(coffee)
+	+st(coffee)
 	+trans(all .7s linear)
 	z-index: 6
 .slider__taxi
 	top: 265px
 	left: -500px
-	+s(taxi)
+	+st(taxi)
 	+trans(all .7s linear)
 	z-index: 6
 .slider__cards
 	top: 265px
 	left: -500px
-	+s(cards)
+	+st(cards)
 	+trans(all .7s linear)
 	z-index: 6
 .slider__calendar
 	top: 80px
 	left: -515px
-	+s(calendar)
+	+st(calendar)
 	+trans(all .7s linear)
 	z-index: 6
 .slider__notebook
 	top: 10px
 	left: -560px
-	+s(notebook)
+	+st(notebook)
 	+trans(all .6s linear)
 	z-index: 6
 	img

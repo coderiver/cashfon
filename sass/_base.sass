@@ -15,6 +15,16 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 @mixin s($sprite, $map: $icons)
 	background: sprite($map, $sprite) no-repeat
 	@include image-size(sprite-file($map, $sprite))
+
+@mixin st($img)
+	//background: sprite($map, $sprite) no-repeat
+	// background: red 
+	// @include image-size($img)
+	$image: $img+".png"
+	$url: "url(../img/"+$image +")"
+	background: unquote($url) no-repeat 0 0
+	width:  image-width($image)
+	height: image-height($image)
 //only image, when dimensions are useless
 @mixin si($map, $sprite)
 	background: sprite($map, $sprite) no-repeat
